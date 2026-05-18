@@ -7,6 +7,7 @@ Repositório: `MrJohnPaixao/Web-Lunya`
 ## Estrutura
 
 - `index.html` - página principal.
+- `privacy-policy.html` - página pública de Termos de Uso e Política de Privacidade.
 - `lunya-page.css` - estilos da página.
 - `lunya_brand_assets/` - ícones e imagens usados pela página.
 - `downloads/` - arquivos públicos de download.

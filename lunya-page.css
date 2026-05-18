@@ -212,6 +212,7 @@ h1 {
 .download-card,
 .dashboard-snapshot,
 .security-grid div,
+.legal-summary,
 .legal-doc details,
 .floating-panel {
   border: 1px solid var(--line);
@@ -549,6 +550,17 @@ h3 {
 .legal-doc {
   display: grid;
   gap: 14px;
+}
+
+.legal-summary {
+  padding: 22px;
+  border-radius: 8px;
+}
+
+.legal-summary p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .legal-doc details {
