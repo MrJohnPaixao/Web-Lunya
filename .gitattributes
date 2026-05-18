@@ -1,0 +1,9 @@
+*.apk binary
+*.exe binary
+*.msi binary
+*.docx binary
+*.png binary
+*.svg text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
