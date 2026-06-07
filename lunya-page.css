@@ -232,8 +232,7 @@ a {
 .product-mark {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 14px;
+  margin: 6px 0 18px;
   color: var(--moon);
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 2vw, 1.45rem);
@@ -243,7 +242,7 @@ a {
 }
 
 .product-mark img {
-  width: clamp(58px, 8vw, 92px);
+  width: clamp(52px, 6.2vw, 78px);
   height: auto;
   filter: drop-shadow(0 0 24px rgba(238, 246, 255, 0.22)) drop-shadow(0 0 30px rgba(0, 229, 255, 0.2));
 }
@@ -256,14 +255,15 @@ p {
 }
 
 h1 {
-  display: inline-block;
+  display: block;
   margin: 0;
   padding-bottom: 0.08em;
-  max-width: 9ch;
+  max-width: 100%;
   font-family: var(--font-display);
-  font-size: clamp(5rem, 15vw, 10.8rem);
+  font-size: clamp(4.25rem, 8.8vw, 8.2rem);
   line-height: 1;
   letter-spacing: 0;
+  white-space: nowrap;
   text-transform: uppercase;
   background: linear-gradient(94deg, var(--moon) 0%, var(--lime) 38%, var(--cyan) 86%);
   -webkit-background-clip: text;
@@ -273,9 +273,9 @@ h1 {
 
 .hero-lead {
   max-width: 640px;
-  margin: 28px 0 0;
-  font-size: clamp(1.25rem, 2.7vw, 2.15rem);
-  line-height: 1.12;
+  margin: 22px 0 0;
+  font-size: clamp(1.18rem, 2vw, 1.72rem);
+  line-height: 1.18;
   color: var(--text);
   font-family: var(--font-alt);
   font-weight: 300;
@@ -285,7 +285,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 34px;
+  margin-top: 28px;
 }
 
 .primary-button,
@@ -310,7 +310,7 @@ h1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   max-width: 680px;
-  margin: 44px 0 0;
+  margin: 34px 0 0;
 }
 
 .hero-metrics div,
