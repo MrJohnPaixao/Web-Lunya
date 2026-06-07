@@ -1,6 +1,6 @@
 # Lunya Page
 
-Página pública da Lunya, produto da Lunaris Tech para finanças pessoais.
+Página pública da Lunya, produto da Lu System para finanças pessoais.
 
 Repositório: `MrJohnPaixao/Web-Lunya`
 
@@ -9,7 +9,7 @@ Repositório: `MrJohnPaixao/Web-Lunya`
 - `index.html` - página principal.
 - `privacy-policy.html` - página pública de Termos de Uso e Política de Privacidade.
 - `lunya-page.css` - estilos da página.
-- `lunya_brand_assets/` - ícones e imagens usados pela página.
+- `book_identidade/` - book e assets oficiais da identidade Lu System.
 - `downloads/` - arquivos públicos de download.
 - `Lunya_Termos_Privacidade_v1.0.docx` - documento legal original.
 
@@ -17,8 +17,8 @@ Repositório: `MrJohnPaixao/Web-Lunya`
 
 ### Windows Desktop
 
-- Instalador EXE: `downloads/windows/Lunya_1.0.0_x64-setup.exe`
-- Instalador MSI: `downloads/windows/Lunya_1.0.0_x64_en-US.msi`
+- Instalador EXE: `downloads/windows/Lunya_2.0.0_x64-setup.exe`
+- Instalador MSI: `downloads/windows/Lunya_2.0.0_x64_en-US.msi`
 
 ### Android APK
 
