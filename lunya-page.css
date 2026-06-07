@@ -444,7 +444,15 @@ h1 {
   min-height: 660px;
 }
 
-.phone-stage::before {
+.desktop-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 620px;
+}
+
+.phone-stage::before,
+.desktop-stage::before {
   content: "";
   position: absolute;
   width: min(96%, 560px);
@@ -514,6 +522,67 @@ h1 {
   background: #05080f;
   box-shadow: 0 34px 100px rgba(0, 0, 0, 0.58), 0 0 46px rgba(238, 246, 255, 0.06);
   animation: lunar-float 8.5s ease-in-out infinite;
+}
+
+.desktop-window {
+  position: relative;
+  z-index: 2;
+  width: min(58vw, 760px);
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgba(238, 246, 255, 0.18);
+  border-radius: 16px;
+  background: #05080f;
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.6), 0 0 54px rgba(0, 229, 255, 0.12);
+  animation: lunar-float 8.5s ease-in-out infinite;
+}
+
+.window-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  color: var(--soft);
+  background: rgba(10, 15, 30, 0.92);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.window-bar i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.window-bar i:first-child {
+  background: var(--danger);
+}
+
+.window-bar i:nth-child(2) {
+  background: var(--lime);
+}
+
+.window-bar i:nth-child(3) {
+  background: var(--cyan);
+}
+
+.window-bar span {
+  margin-left: 8px;
+}
+
+.desktop-window img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 0 0 10px 10px;
+  background: rgba(0, 0, 0, 0.22);
 }
 
 .phone::before {
@@ -1092,8 +1161,13 @@ h3 {
     padding-top: 56px;
   }
 
-  .phone-stage {
+  .phone-stage,
+  .desktop-stage {
     min-height: 560px;
+  }
+
+  .desktop-window {
+    width: min(92vw, 760px);
   }
 
   .feature-grid {
@@ -1171,7 +1245,8 @@ h3 {
     border-top: 1px solid var(--line);
   }
 
-  .phone-stage {
+  .phone-stage,
+  .desktop-stage {
     min-height: 520px;
   }
 
@@ -1179,9 +1254,21 @@ h3 {
     display: none;
   }
 
-  .phone-stage::before {
+  .phone-stage::before,
+  .desktop-stage::before {
     width: min(108%, 420px);
     opacity: 0.42;
+  }
+
+  .desktop-window {
+    width: 100%;
+    padding: 7px;
+    border-radius: 12px;
+  }
+
+  .window-bar {
+    height: 30px;
+    font-size: 0.64rem;
   }
 
   .floating-panel {
