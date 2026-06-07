@@ -787,6 +787,108 @@ h3 {
   font-weight: 700;
 }
 
+.desktop-screens {
+  padding-bottom: 64px;
+}
+
+.screen-showcase {
+  display: grid;
+  gap: 14px;
+}
+
+.screen-feature {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.36fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(0, 229, 255, 0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(0, 229, 255, 0.065), rgba(19, 32, 64, 0.2)),
+    rgba(10, 15, 30, 0.5);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.screen-feature-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 6px;
+}
+
+.screen-code,
+.desktop-screen-card span {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+}
+
+.screen-feature h3 {
+  margin: 16px 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3vw, 2.55rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.screen-feature p {
+  margin: 0;
+  color: var(--soft);
+  line-height: 1.6;
+}
+
+.screen-feature img,
+.desktop-screen-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+}
+
+.screen-feature img {
+  align-self: center;
+}
+
+.screen-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.desktop-screen-card {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(0, 229, 255, 0.045), rgba(19, 32, 64, 0.18)),
+    rgba(10, 15, 30, 0.46);
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.32);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.desktop-screen-card:hover,
+.screen-feature:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.48), 0 0 28px rgba(238, 246, 255, 0.05);
+}
+
+.desktop-screen-card h3 {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
 .feature-icon {
   display: inline-flex;
   margin-bottom: 52px;
@@ -1002,6 +1104,14 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .screen-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .screen-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .ticker {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1050,6 +1160,7 @@ h3 {
 
   .hero-metrics,
   .feature-grid,
+  .screen-grid,
   .download-grid,
   .ticker {
     grid-template-columns: 1fr;
