@@ -1,4 +1,4 @@
-/* LUNYA — Apresentação técnica · gerador de pranchas + scroll reveal */
+/* LUNYA — Apresentação de funcionalidades + scroll reveal */
 (function(){
   "use strict";
 
@@ -8,7 +8,7 @@
   // ── Dados das pranchas · t=[alvo] na imagem 924×540, side l/r, ay=altura do rótulo ──
   const PLATES = [
     {
-      code:"PR-01", id:"dashboard", title:"Dashboard", img:"plates/dashboard.png",
+      code:"Visão geral", id:"dashboard", title:"Dashboard", img:"plates/dashboard.png",
       desc:"Visão geral do mês — KPIs, fluxo de caixa, faturas e lançamentos previstos.",
       specs:["5 KPIs do mês","Fluxo de caixa · 30 dias","Por categoria · donut","Próximas faturas","Receitas/despesas previstas","Período mês / 7D / 30D / 90D"],
       callouts:[
@@ -19,7 +19,7 @@
       ]
     },
     {
-      code:"PR-02", id:"conta", title:"Conta", img:"plates/conta.png",
+      code:"Saldos", id:"conta", title:"Conta", img:"plates/conta.png",
       desc:"Todas as contas e cartões num só lugar, com saldo, patrimônio e fatura consolidados.",
       specs:["Saldo total + patrimônio","Contas bancárias e digitais","Contas-cartão e faturas","Subcontas e cotas","Multi-instituição"],
       callouts:[
@@ -29,7 +29,7 @@
       ]
     },
     {
-      code:"PR-03", id:"investimentos", title:"Investimentos", img:"plates/investimentos.png",
+      code:"Carteira", id:"investimentos", title:"Investimentos", img:"plates/investimentos.png",
       desc:"Acompanhe patrimônio aplicado, rendimento e vencimentos de cada posição.",
       specs:["Patrimônio aplicado","Rendimento e rentabilidade","Renda fixa · tesouro · fundos","Cripto · ações · poupança","Alerta de vencimento"],
       callouts:[
@@ -40,7 +40,7 @@
       ]
     },
     {
-      code:"PR-04", id:"cartoes", title:"Cartões", img:"plates/cartoes.png",
+      code:"Faturas", id:"cartoes", title:"Cartões", img:"plates/cartoes.png",
       desc:"Faturas, limites e lançamentos dos seus cartões — com importação e parcelamento.",
       specs:["Deck de cartões","Fatura aberta · vencimento","Limite usado / disponível","Lançamentos e conciliação","Importar fatura · parcelas"],
       callouts:[
@@ -51,7 +51,7 @@
       ]
     },
     {
-      code:"PR-05", id:"transacoes", title:"Transações", img:"plates/transacoes.png",
+      code:"Histórico", id:"transacoes", title:"Transações", img:"plates/transacoes.png",
       desc:"Histórico completo com filtros, navegação por mês e importação de extratos OFX.",
       specs:["Lista agrupada por dia","Filtros · período / conta / status","Situação do período","Importação OFX / QFX","Totais do período"],
       callouts:[
@@ -62,7 +62,7 @@
       ]
     },
     {
-      code:"PR-06", id:"orcamentos", title:"Orçamentos", img:"plates/orcamentos.png",
+      code:"Limites", id:"orcamentos", title:"Orçamentos", img:"plates/orcamentos.png",
       desc:"Defina limites por categoria e acompanhe o consumo conforme os gastos entram.",
       specs:["Planejado / consumido / disponível","Limite por categorias","Alerta configurável (%)","Status do orçamento","Transações e cartões"],
       callouts:[
@@ -116,14 +116,12 @@
   function titleBlock(p){
     return `<div class="titleblock plate-tb">
       <div class="tb-row">
-        <div class="cell" style="grid-column:span 2;"><div class="k">Projeto</div><div class="v">Lunya · Finanças</div></div>
-        <div class="cell"><div class="k">Folha</div><div class="v acc">${p.code}</div></div>
-        <div class="cell"><div class="k">Rev</div><div class="v">A</div></div>
+        <div class="cell" style="grid-column:span 2;"><div class="k">Produto</div><div class="v">Lunya · Finanças</div></div>
+        <div class="cell" style="grid-column:span 2;"><div class="k">Área</div><div class="v acc">${p.code}</div></div>
       </div>
       <div class="tb-row">
         <div class="cell" style="grid-column:span 2;"><div class="k">Módulo</div><div class="v">${p.title}</div></div>
-        <div class="cell"><div class="k">Escala</div><div class="v">1:1.55</div></div>
-        <div class="cell"><div class="k">Un.</div><div class="v">PX</div></div>
+        <div class="cell" style="grid-column:span 2;"><div class="k">Uso</div><div class="v">Rotina financeira</div></div>
       </div>
     </div>`;
   }
@@ -161,7 +159,7 @@
   PLATES.forEach(p=>{
     const a=document.createElement("a");
     a.href="#"+p.id; a.dataset.id=p.id;
-    a.innerHTML=`<span>${p.code} · ${p.title}</span><span class="tick"></span>`;
+    a.innerHTML=`<span>${p.code}</span><span class="tick"></span>`;
     rail.appendChild(a);
   });
 

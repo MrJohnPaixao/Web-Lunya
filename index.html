@@ -20,7 +20,7 @@
     </a>
     <nav class="nav" aria-label="Navegacao principal">
       <a href="#recursos">Recursos</a>
-      <a href="#telas">Telas</a>
+      <a href="#telas">Funcionalidades</a>
       <a href="#controle">Controle</a>
       <a href="#seguranca">Segurança</a>
       <a href="#downloads">Downloads</a>
@@ -33,14 +33,11 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Lu System apresenta</p>
-        <div class="product-mark" aria-hidden="true">
-          <img src="book_identidade/assets/lu-moon.svg" alt="" width="92" height="92"/>
-        </div>
         <h1 id="hero-title">Lunya</h1>
         <p class="hero-lead">O Lunya desktop é a versão principal para organizar contas, transações, cartões, investimentos e orçamentos com a identidade Lu System.</p>
         <div class="hero-actions">
           <a class="primary-button" href="#downloads">Baixar para Windows</a>
-          <a class="secondary-button" href="#telas">Ver telas desktop</a>
+          <a class="secondary-button" href="#telas">Funcionalidades</a>
         </div>
         <dl class="hero-metrics" aria-label="Destaques do app">
           <div>
@@ -56,21 +53,12 @@
 
       <div class="desktop-stage" aria-label="Prévia visual do Lunya desktop">
         <img class="system-moon" src="book_identidade/assets/lu-moon.svg" alt="Símbolo Lu System"/>
-        <div class="orbit-ring"></div>
+        <div class="desktop-ambient desktop-ambient-one" aria-hidden="true"></div>
+        <div class="desktop-ambient desktop-ambient-two" aria-hidden="true"></div>
         <figure class="desktop-window">
           <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lunya Desktop</span></div>
-          <img src="caderno_features/plates/dashboard.png" alt="Tela do Lunya desktop com dashboard financeiro"/>
+          <img src="caderno_features/plates/dashboard.png" alt="Tela do Lunya desktop com dashboard financeiro" decoding="async"/>
         </figure>
-        <div class="floating-panel balance-panel">
-          <span>Windows</span>
-          <strong>v2.0.0</strong>
-          <small>versão em destaque</small>
-        </div>
-        <div class="floating-panel card-panel">
-          <span>Mobile</span>
-          <strong>Protótipo</strong>
-          <small>em desenvolvimento</small>
-        </div>
       </div>
     </section>
 
@@ -83,43 +71,47 @@
 
     <section class="section desktop-screens" id="telas" aria-labelledby="telas-title">
       <div class="section-heading">
-        <p class="eyebrow">Versão desktop</p>
-        <h2 id="telas-title">O caderno de telas agora está no site.</h2>
-        <p>Veja as principais telas da Lunya para desktop: dashboard, conta, investimentos, cartões, transações e orçamentos. As pranchas completas continuam disponíveis em uma página dedicada.</p>
+        <p class="eyebrow">Funcionalidades desktop</p>
+        <h2 id="telas-title">O que a Lunya entrega no dia a dia.</h2>
+        <p>Conheça os principais espaços da Lunya para desktop: visão geral, contas, investimentos, cartões, transações e orçamentos. Tudo pensado para acompanhar sua vida financeira no computador.</p>
       </div>
 
       <div class="screen-showcase">
-        <article class="screen-feature">
+        <article class="screen-feature" aria-live="polite">
           <div class="screen-feature-copy">
-            <span class="screen-code">PR-01</span>
-            <h3>Dashboard</h3>
-            <p>Visão geral do mês com indicadores, fluxo de caixa, faturas e lançamentos previstos para leitura rápida.</p>
-            <a class="download-alt" href="caderno_features/Lunya%20-%20Caderno%20de%20Telas.html">Abrir caderno completo</a>
+            <span class="screen-code" id="screen-feature-label">Visão geral</span>
+            <h3 id="screen-feature-title">Dashboard</h3>
+            <p id="screen-feature-desc">Visão geral do mês com indicadores, fluxo de caixa, faturas e lançamentos previstos para leitura rápida.</p>
+            <a class="download-alt" href="caderno_features/Lunya%20-%20Caderno%20de%20Telas.html">Ver apresentação completa</a>
           </div>
-          <img src="caderno_features/plates/dashboard.png" alt="Tela desktop Lunya: dashboard financeiro"/>
+          <img id="screen-feature-image" src="caderno_features/plates/dashboard.png" alt="Tela desktop Lunya: dashboard financeiro" loading="lazy" decoding="async"/>
         </article>
 
         <div class="screen-grid" aria-label="Telas desktop da Lunya">
-          <article class="desktop-screen-card">
-            <img src="caderno_features/plates/conta.png" alt="Tela desktop Lunya: conta e patrimônio"/>
-            <div><span>PR-02</span><h3>Conta</h3></div>
-          </article>
-          <article class="desktop-screen-card">
-            <img src="caderno_features/plates/investimentos.png" alt="Tela desktop Lunya: investimentos"/>
-            <div><span>PR-03</span><h3>Investimentos</h3></div>
-          </article>
-          <article class="desktop-screen-card">
-            <img src="caderno_features/plates/cartoes.png" alt="Tela desktop Lunya: cartões e faturas"/>
-            <div><span>PR-04</span><h3>Cartões</h3></div>
-          </article>
-          <article class="desktop-screen-card">
-            <img src="caderno_features/plates/transacoes.png" alt="Tela desktop Lunya: transações"/>
-            <div><span>PR-05</span><h3>Transações</h3></div>
-          </article>
-          <article class="desktop-screen-card">
-            <img src="caderno_features/plates/orcamentos.png" alt="Tela desktop Lunya: orçamentos"/>
-            <div><span>PR-06</span><h3>Orçamentos</h3></div>
-          </article>
+          <button class="desktop-screen-card is-active" type="button" aria-pressed="true" data-screen-label="Visão geral" data-screen-title="Dashboard" data-screen-desc="Visão geral do mês com indicadores, fluxo de caixa, faturas e lançamentos previstos para leitura rápida." data-screen-img="caderno_features/plates/dashboard.png" data-screen-alt="Tela desktop Lunya: dashboard financeiro">
+            <img src="caderno_features/plates/dashboard.png" alt="" loading="lazy" decoding="async"/>
+            <div><span>Visão geral</span><h3>Dashboard</h3></div>
+          </button>
+          <button class="desktop-screen-card" type="button" aria-pressed="false" data-screen-label="Saldos e patrimônio" data-screen-title="Conta" data-screen-desc="Acompanhe contas, saldos, patrimônio consolidado e faturas em uma visão organizada para consulta rápida." data-screen-img="caderno_features/plates/conta.png" data-screen-alt="Tela desktop Lunya: conta e patrimônio">
+            <img src="caderno_features/plates/conta.png" alt="Tela desktop Lunya: conta e patrimônio" loading="lazy" decoding="async"/>
+            <div><span>Saldos e patrimônio</span><h3>Conta</h3></div>
+          </button>
+          <button class="desktop-screen-card" type="button" aria-pressed="false" data-screen-label="Carteira e rendimento" data-screen-title="Investimentos" data-screen-desc="Veja patrimônio aplicado, rendimento, posições e vencimentos para entender a evolução da sua carteira." data-screen-img="caderno_features/plates/investimentos.png" data-screen-alt="Tela desktop Lunya: investimentos">
+            <img src="caderno_features/plates/investimentos.png" alt="Tela desktop Lunya: investimentos" loading="lazy" decoding="async"/>
+            <div><span>Carteira e rendimento</span><h3>Investimentos</h3></div>
+          </button>
+          <button class="desktop-screen-card" type="button" aria-pressed="false" data-screen-label="Faturas e limites" data-screen-title="Cartões" data-screen-desc="Organize cartões, limites, faturas abertas, vencimentos e lançamentos parcelados em um só lugar." data-screen-img="caderno_features/plates/cartoes.png" data-screen-alt="Tela desktop Lunya: cartões e faturas">
+            <img src="caderno_features/plates/cartoes.png" alt="Tela desktop Lunya: cartões e faturas" loading="lazy" decoding="async"/>
+            <div><span>Faturas e limites</span><h3>Cartões</h3></div>
+          </button>
+          <button class="desktop-screen-card" type="button" aria-pressed="false" data-screen-label="Histórico financeiro" data-screen-title="Transações" data-screen-desc="Consulte movimentações por período, filtre lançamentos e acompanhe entradas, saídas e resultado." data-screen-img="caderno_features/plates/transacoes.png" data-screen-alt="Tela desktop Lunya: transações">
+            <img src="caderno_features/plates/transacoes.png" alt="Tela desktop Lunya: transações" loading="lazy" decoding="async"/>
+            <div><span>Histórico financeiro</span><h3>Transações</h3></div>
+          </button>
+          <button class="desktop-screen-card" type="button" aria-pressed="false" data-screen-label="Limites por categoria" data-screen-title="Orçamentos" data-screen-desc="Defina limites por categoria e acompanhe quanto já foi consumido durante o mês." data-screen-img="caderno_features/plates/orcamentos.png" data-screen-alt="Tela desktop Lunya: orçamentos">
+            <img src="caderno_features/plates/orcamentos.png" alt="Tela desktop Lunya: orçamentos" loading="lazy" decoding="async"/>
+            <div><span>Limites por categoria</span><h3>Orçamentos</h3></div>
+          </button>
         </div>
       </div>
     </section>
@@ -138,13 +130,37 @@
           <a class="primary-button" href="downloads/windows/Lunya_2.0.0_x64-setup.exe" download>Baixar Desktop</a>
           <a class="download-alt" href="downloads/windows/Lunya_2.0.0_x64_en-US.msi" download>Baixar instalador MSI</a>
         </article>
-        <article class="download-card">
-          <span class="download-platform">Mobile em protótipo</span>
-          <h3>LunyaMB para Android</h3>
-          <p>Prévia mobile ainda não finalizada. O APK serve para testes internos e validação da experiência, não como versão principal do produto.</p>
+      </div>
+    </section>
+
+    <section class="section mobile-prototype" aria-labelledby="mobile-title">
+      <div class="mobile-prototype-copy">
+        <p class="eyebrow">Mobile em protótipo</p>
+        <h2 id="mobile-title">A versão Android ainda está sendo lapidada.</h2>
+        <p>O LunyaMB existe para testar ideias de consulta rápida pelo celular, mas a experiência ainda não está pronta para ser tratada como produto final. Por enquanto, o foco público da Lunya é o desktop para Windows.</p>
+      </div>
+      <div class="mobile-prototype-visual" aria-label="Prévia visual do protótipo mobile Lunya">
+        <figure class="phone mobile-phone">
+          <div class="phone-screen" role="img" aria-label="Molde do protótipo mobile Lunya">
+            <img src="book_identidade/assets/lu-moon.svg" alt=""/>
+            <span class="screen-brand">Lunya</span>
+            <span class="screen-subtitle">Finanças pessoais</span>
+            <div class="screen-card">
+              <span>Protótipo Android</span>
+              <strong>Em teste</strong>
+            </div>
+            <div class="screen-nav" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </figure>
+      </div>
+      <div class="mobile-prototype-panel">
+        <span class="download-platform">LunyaMB Android</span>
+        <h3>Prévia técnica</h3>
+        <p>Use os APKs apenas para testes, validação visual e acompanhamento do desenvolvimento mobile.</p>
+        <div class="mobile-actions">
           <a class="secondary-button" href="downloads/app-release.apk" download>Baixar APK de teste</a>
-          <a class="download-alt" href="downloads/app-arm64-v8a-release.apk" download>Baixar build ARM64 de teste</a>
-        </article>
+          <a class="download-alt" href="downloads/app-arm64-v8a-release.apk" download>Build ARM64 de teste</a>
+        </div>
       </div>
     </section>
 
@@ -257,5 +273,30 @@
     </div>
     <p>Lunya e um produto Lu System para finanças pessoais. <a href="privacy-policy.html">Termos e Privacidade</a></p>
   </footer>
+  <script>
+    (() => {
+      const buttons = document.querySelectorAll(".desktop-screen-card[data-screen-img]");
+      const label = document.getElementById("screen-feature-label");
+      const title = document.getElementById("screen-feature-title");
+      const desc = document.getElementById("screen-feature-desc");
+      const image = document.getElementById("screen-feature-image");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          label.textContent = button.dataset.screenLabel;
+          title.textContent = button.dataset.screenTitle;
+          desc.textContent = button.dataset.screenDesc;
+          image.src = button.dataset.screenImg;
+          image.alt = button.dataset.screenAlt;
+
+          buttons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
