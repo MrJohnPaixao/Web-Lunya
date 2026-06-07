@@ -9,18 +9,18 @@
   <style>
     /* ── Design tokens ──────────────────────────────────────── */
     :root {
-      --bg-0:        #03060d;
-      --bg-1:        #050a1d;
-      --bg-2:        #0c1538;
-      --panel:       rgba(7, 13, 31, 0.74);
-      --panel-solid: #081021;
-      --line:        rgba(128, 188, 220, 0.16);
-      --line-strong: rgba(128, 188, 220, 0.28);
-      --text:        #f0f5ff;
-      --muted:       #b8c4dc;
-      --soft:        #7886a5;
-      --lime:        #c8ff4a;
-      --cyan:        #4ee3da;
+      --bg-0:        #0A0F1E;
+      --bg-1:        #0D1830;
+      --bg-2:        #132040;
+      --panel:       rgba(13, 24, 48, 0.78);
+      --panel-solid: #0D1830;
+      --line:        rgba(0, 229, 255, 0.18);
+      --line-strong: rgba(0, 229, 255, 0.34);
+      --text:        #ffffff;
+      --muted:       #c9d8ec;
+      --soft:        #8A9CB5;
+      --lime:        #C8FF00;
+      --cyan:        #00E5FF;
       --violet:      #b08cff;
       --danger:      #ff6b91;
     }
@@ -39,10 +39,11 @@
       line-height: 1.7;
       color: var(--text);
       background:
-        radial-gradient(ellipse at 18%  8%, rgba(78,227,218,0.10), transparent 34rem),
-        radial-gradient(ellipse at 86% 28%, rgba(200,255,74,0.07), transparent 32rem),
-        radial-gradient(ellipse at 70% 80%, rgba(176,140,255,0.09), transparent 34rem),
-        linear-gradient(180deg, var(--bg-0), var(--bg-1) 46%, #02040a);
+        radial-gradient(70rem 42rem at 76% 12%, rgba(0,146,210,0.22), rgba(0,229,255,0.08) 36%, transparent 70%),
+        radial-gradient(54rem 36rem at 18% 16%, rgba(19,32,64,0.76), transparent 64%),
+        linear-gradient(180deg, rgba(10,15,30,0.68), rgba(7,14,30,0.76) 46%, rgba(3,7,16,0.92)),
+        url("book_identidade/assets/deep-space-background.png") center top / cover fixed,
+        #0A0F1E;
       overflow-x: hidden;
     }
 
@@ -53,10 +54,13 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.030) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.030) 1px, transparent 1px);
-      background-size: 72px 72px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 60%);
+        radial-gradient(circle, rgba(255,255,255,0.52) 0 1px, transparent 1.6px),
+        radial-gradient(circle, rgba(0,140,255,0.44) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(0,229,255,0.32) 0 1px, transparent 1.6px);
+      background-position: 24px 18px, 96px 122px, 176px 64px;
+      background-size: 164px 188px, 232px 254px, 308px 336px;
+      opacity: 0.32;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent 78%);
       z-index: 0;
     }
 
@@ -80,7 +84,7 @@
       border-left: 0;
       border-right: 0;
       border-radius: 0;
-      background: rgba(3, 6, 13, 0.82);
+      background: rgba(10, 15, 30, 0.82);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
     }
