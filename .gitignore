@@ -17,8 +17,3 @@ build/
 dist/
 out/
 *.nsis.log
-
-# Binarios publicados via GitHub Releases
-downloads/**/*.apk
-downloads/**/*.exe
-downloads/**/*.msi
