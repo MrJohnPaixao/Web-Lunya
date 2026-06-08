@@ -7,5 +7,5 @@ Arquivos Android publicados:
 
 Arquivos Windows publicados:
 
-- `windows/Lunya_2.0.0_x64-setup.exe`
-- `windows/Lunya_2.0.0_x64_en-US.msi`
+- `windows/Lunya_2.0.4_x64-setup.exe`
+- `windows/Lunya_2.0.4_x64_en-US.msi`
