@@ -31,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 @keyframes star-drift {
@@ -137,6 +138,28 @@ html {
   }
 }
 
+@keyframes shooting-star {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-18deg) scaleX(0.2);
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  42% {
+    opacity: 0.9;
+    transform: translate3d(-46vw, 34vh, 0) rotate(-18deg) scaleX(1);
+  }
+
+  56%,
+  100% {
+    opacity: 0;
+    transform: translate3d(-58vw, 43vh, 0) rotate(-18deg) scaleX(0.55);
+  }
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -164,6 +187,7 @@ body::before {
   background-size: 164px 188px, 232px 254px, 308px 336px;
   opacity: 0.32;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 78%);
+  animation: star-drift 34s linear infinite;
   z-index: 0;
 }
 
@@ -189,6 +213,52 @@ main,
 .footer {
   position: relative;
   z-index: 1;
+}
+
+.shooting-stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shooting-stars span {
+  position: absolute;
+  top: 12%;
+  left: 112%;
+  width: clamp(120px, 16vw, 260px);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(238, 246, 255, 0.92) 45%, rgba(0, 229, 255, 0));
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.45), 0 0 34px rgba(238, 246, 255, 0.18);
+  opacity: 0;
+  transform-origin: right center;
+  animation: shooting-star 8.5s linear infinite;
+}
+
+.shooting-stars span:nth-child(2) {
+  top: 28%;
+  left: 106%;
+  width: clamp(90px, 12vw, 190px);
+  animation-delay: -3.2s;
+  animation-duration: 11s;
+}
+
+.shooting-stars span:nth-child(3) {
+  top: 8%;
+  left: 92%;
+  width: clamp(80px, 10vw, 160px);
+  animation-delay: -6.4s;
+  animation-duration: 13s;
+}
+
+.shooting-stars span:nth-child(4) {
+  top: 46%;
+  left: 118%;
+  width: clamp(110px, 14vw, 220px);
+  animation-delay: -9s;
+  animation-duration: 15s;
 }
 
 a {
@@ -842,6 +912,7 @@ h1 {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding: 96px 0;
+  scroll-margin-top: 104px;
 }
 
 .section-heading {
@@ -864,7 +935,7 @@ h2 {
   margin: 0;
   font-family: var(--font-display);
   font-size: clamp(2.15rem, 5vw, 4.5rem);
-  line-height: 0.98;
+  line-height: 1.06;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -882,14 +953,16 @@ h3 {
 }
 
 .feature-card {
-  min-height: 250px;
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
   padding: 20px;
   border-radius: 8px;
 }
 
 .download-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr);
+  grid-template-columns: minmax(0, 860px);
   gap: 14px;
 }
 
@@ -946,9 +1019,9 @@ h3 {
 .mobile-prototype-visual {
   position: relative;
   display: grid;
-  min-height: 620px;
+  min-height: min(620px, 78vh);
   place-items: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .mobile-prototype-visual::before {
@@ -1047,7 +1120,7 @@ h3 {
     linear-gradient(180deg, rgba(0, 229, 255, 0.065), rgba(19, 32, 64, 0.2)),
     rgba(10, 15, 30, 0.5);
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .screen-feature-copy {
@@ -1103,6 +1176,7 @@ h3 {
 
 .desktop-screen-card {
   display: grid;
+  grid-template-rows: auto 1fr;
   gap: 12px;
   min-width: 0;
   width: 100%;
@@ -1148,7 +1222,7 @@ h3 {
 
 .feature-icon {
   display: inline-flex;
-  margin-bottom: 52px;
+  margin-bottom: 36px;
   font-family: "JetBrains Mono", monospace;
   color: var(--cyan);
 }
@@ -1160,6 +1234,10 @@ h3 {
   margin: 0;
   color: var(--soft);
   line-height: 1.6;
+}
+
+.feature-card p {
+  margin-top: auto;
 }
 
 .app-preview {
@@ -1360,7 +1438,7 @@ h3 {
   }
 
   .mobile-prototype-visual {
-    min-height: 560px;
+    min-height: 540px;
   }
 
   .desktop-ambient-one {
@@ -1399,6 +1477,10 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  html {
+    scroll-padding-top: 168px;
+  }
+
   body::after {
     top: 140px;
     right: -190px;
@@ -1445,7 +1527,8 @@ h3 {
 
   .phone-stage,
   .desktop-stage {
-    min-height: 520px;
+    min-height: auto;
+    padding: 28px 0;
   }
 
   .hero::before {
@@ -1470,7 +1553,8 @@ h3 {
   }
 
   .mobile-prototype-visual {
-    min-height: 500px;
+    min-height: auto;
+    padding: 12px 0;
   }
 
   .mobile-phone {
@@ -1513,6 +1597,7 @@ h3 {
   .section,
   .app-preview {
     padding: 68px 0;
+    scroll-margin-top: 176px;
   }
 
   .feature-card {
